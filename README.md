@@ -50,6 +50,3 @@ i-Nav is a smart indoor navigation system developed for IIT Jammu’s multi-floo
 
 This project enables efficient and realistic indoor navigation within complex buildings such as academic campuses, hospitals, and commercial facilities—where traversal time is more critical than physical distance.
 
----
-
-Let me know if you'd like to add a section for setup instructions or include visual examples like floorplans or routing diagrams.
