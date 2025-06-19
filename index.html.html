@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Navigation System</title>
+
+  <!-- ✅ Link to your CSS (Flask style) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <!-- Splash screen -->
+  <div id="splash">
+    <span>Indoor Campus Navigation System</span>
+    <div id="bubbles-container"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="hero-section">
+    <img src="{{ url_for('static', filename='background image.png') }}" alt="Campus Background" class="hero-bg">
+    <div class="hero-content">
+      <h1>
+        Navigate your campus smarter —<br />
+        find the fastest path in seconds!
+      </h1>
+      <hr />
+      <p>
+        Welcome to i-Nav! Click here to discover how our indoor campus navigation system can help you find the quickest routes between buildings, classrooms, and facilities. Navigate your campus smarter with i-Nav and save time for what matters most.
+      </p>
+    </div>
+  </header>
+
+  <!-- Main Navigation Area -->
+  <div>
+    <h1>Explore Your Path with Ease</h1>
+
+    <!-- Start Button -->
+    <button id="startBtn">Start Navigation</button>
+
+    <!-- Dropdown section -->
+    <div class="location-container" id="location-container" style="display: block;">
+
+      <!-- Current Location -->
+      <div class="dropdown-box">
+        <h3>Current Location</h3>
+        <input type="text" id="current-search" placeholder="Search Room No (e.g. 2004)" class="search-input" autocomplete="off">
+        <ul id="current-room" class="dropdown-list"></ul>
+      </div>
+
+      <!-- Destination -->
+      <div class="dropdown-box">
+        <h3>Destination</h3>
+        <input type="text" id="destination-search" placeholder="Search Room No (e.g. 1012)" class="search-input" autocomplete="off">
+        <ul id="destination-room" class="dropdown-list"></ul>
+      </div>
+
+      <!-- Start Navigation Button -->
+      <div style="margin-top: 20px;">
+        <button id="startNavigationBtn">Start Navigation</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Path Form (used by JavaScript to submit to backend) -->
+  <form id="pathForm" style="display:none;">
+    <input id="start" type="text" placeholder="Start Node">
+    <input id="end" type="text" placeholder="End Node">
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="result"></div>
+
+  <!-- Footer -->
+  <div class="CONTACT">
+    <h1>Contact Us</h1>
+    <form>
+      <div class="form-group">
+        <div class="form-field">
+          <label for="fname">First Name *</label>
+          <input type="text" id="fname" name="fname" required>
+        </div>
+        <div class="form-field">
+          <label for="lname">Last Name *</label>
+          <input type="text" id="lname" name="lname" required>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <footer>
+      <div class="f1">
+        <p>IIT Jammu, NH 44, Jagti, Jammu, J&K, 181221</p>
+        <p>Tel. 01912570282</p>
+        <p>
+          <a href="mailto:tlu.support@iitjammu.ac.in">tlu.support@iitjammu.ac.in</a>
+        </p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ✅ Link to your JavaScript (Flask style) -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
